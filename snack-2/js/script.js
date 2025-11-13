@@ -16,11 +16,36 @@ const squadre = [
   { nome: "Fiorentina", puntiFatti: 0, falliSubiti: 0 }
 ];
 
-const randomNumberPuntiFatti = Math.floor(Math.random() * (100 - 0 + 1)) + 0;
+
+//   const randomNumberPuntiFatti = Math.floor(Math.random() * (100 - 0 + 1)) + 0;
 // console.log(randomNumberPuntiFatti);
 
-const randomNuberFalliSubiti = Math.floor(Math.random() * (50 - 0 + 1)) + 0;
-console.log(randomNuberFalliSubiti);
+// const randomNuberFalliSubiti = Math.floor(Math.random() * (50 - 0 + 1)) + 0;
+// console.log(randomNuberFalliSubiti);
 
+// creato un array e generato numeri random per le due proprietà specificate 'puntifatti' e 'fallisubiti'
 
+for (let i = 0; i < squadre.length; i++) {
+    curSquadra = squadre[i];
+    const randomNumberPuntiFatti = Math.floor(Math.random() * (100 - 0 + 1)) + 0;
+    curSquadra.puntiFatti = randomNumberPuntiFatti
+    console.log(curSquadra);
+    
+    const randomNuberFalliSubiti = Math.floor(Math.random() * (50 - 0 + 1)) + 0;
+    curSquadra.falliSubiti = randomNuberFalliSubiti
+    console.log(curSquadra);
+    
+}
+// ciclato, inserendo all'interno del ciclo, per ogni proprietà, un numero random
+
+const nuovoArray = [];
+for (let i = 0; i < squadre.length; i++) {
+    const nome = squadre[i].nome;
+    const falliSubiti = squadre[i].falliSubiti;
+
+    nuovoArray.push(nome);
+    nuovoArray.push(falliSubiti);
+};
+// utilizzato un altro ciclo per creare un nuovo array pushando solo due proprietà specitifiche 
+// console.log(nuovoArray);
 
